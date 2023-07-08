@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>PendleCodeMonkey.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="TestData\TestDataFile.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="TestData\TestDataFile.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataCompressionLib\DataCompressionLib.csproj" />
+  </ItemGroup>
+
+</Project>
